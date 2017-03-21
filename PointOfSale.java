@@ -7,7 +7,8 @@
  * 1. Declare variables
  * 2. Declare constants
  * 3. Create Arrays 
- * 4. 
+ * 4. Get user input
+ * 5. Create loop
  */
 
 import java.text.NumberFormat;
