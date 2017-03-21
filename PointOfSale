@@ -3,7 +3,11 @@
  * Purpose:			To Create a simple Point of sale system with user input
  * Coder:			Ayden Green 0818753
  * Date:		    
- * 
+ * Algorythm:
+ * 1. Declare variables
+ * 2. Declare constants
+ * 3. Create Arrays 
+ * 4. 
  */
 
 import java.text.NumberFormat;
@@ -15,5 +19,6 @@ public class PointOfSale
 	{
 		//Create a Scanner object
 		Scanner input = new Scanner(System.in);
+
     }
 }
