@@ -22,7 +22,9 @@ public class PointOfSale
 	{
 		//Create a Scanner object
 		Scanner input = new Scanner(System.in);
+		//Create variables
 		String custname = "";
+		//Creat Arrays
 		Double[] priceArray = {}; 
 
 		System.out.println("Hi! Welcome to Maggie's! \nWhat's your name?");
