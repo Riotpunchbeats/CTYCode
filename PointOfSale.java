@@ -31,7 +31,5 @@ public class PointOfSale
 		System.out.println("\nIf you make a mistake while entering a price, just enter a zero for the next entry. The last entry will then be subtracted from your total.");
 
 		System.out.println("enter");
-		
-
     }
 }
