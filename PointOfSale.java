@@ -45,16 +45,16 @@ public class PointOfSale
 
     //get user input
     System.out.print("Please enter your item price:  ");
-    for(int x = 0; x<itemArray.length; x++)
+    for(int x = 0; x<array.length; x++)
     {
         System.out.print("item " + (x + 1) + ": $  ");
-        itemArray[x] = input.nextInt();
+        array[x] = input.nextInt();
 
         //validate input
-        while(itemArray[x] < 0 || itemArray[x] > 99.99)
+        while(array[x] < 0 || array[x] > 99.99)
             {
                 System.out.print("Out of range, please enter a valid price.");
-                itemArray[x] = input.nextInt();
+                array[x] = input.nextInt();
             }
     }
     return array;
