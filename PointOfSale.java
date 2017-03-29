@@ -24,9 +24,9 @@ public class PointOfSale
 		Scanner input = new Scanner(System.in);
 		//Create variables
 		String custname = "";
-		//Creat Arrays
+		//Create Arrays
 		Double[] priceArray = {}; 
-
+		
 		System.out.println("Hi! Welcome to Maggie's! \nWhat's your name?");
 		custname = input.next();
 		System.out.println("Ok, " + custname + ", enter the price of each of your purchases in dollars and cents and then hit the ENTER key. \nFor example, if your item cost $5.99, then you would enter 5.99.");
