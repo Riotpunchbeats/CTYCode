@@ -36,27 +36,15 @@ public class PointOfSale
 
 		
     }
-	public static double [] fillArray() 
-    {
-    double [] array = new double[10];
-
-    
+public static void fillArray (String[] args)
+{
     Scanner input = new Scanner(System.in);
+    double[] numbers = new double[10];
 
-    //get user input
-    System.out.print("Please enter your item price:  ");
-    for(double x = 0; x<array.length; x++)
+    for (int i = 0; i < numbers.length; i++)
     {
-        System.out.print("item " + (x + 1) + ": $  ");
-        array[x] = input.nextInt();
-
-        //validate input
-        while(array[x] < 0 || array[x] > 99.99)
-            {
-                System.out.print("Out of range, please enter a valid price.");
-                array[x] = input.nextInt();
-            }
+        System.out.println("Please enter number");
+        numbers[i] = input.nextDouble();
     }
-    return array;
-}//end of user input
+}
 }

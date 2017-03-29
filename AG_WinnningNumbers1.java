@@ -95,7 +95,7 @@ public static int [] fillWin()
 
    
     
-    for(int x = 0; x<array.length; x++)
+    for(int x = 0; x< array.length; x++)
     {
        ;
         array[x] = (int)(Math.random() * (9 - 0 + 1) + 0);
