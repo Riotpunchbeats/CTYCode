@@ -25,7 +25,7 @@ public class PointOfSale
 		//Create variables
 		String custname = "";
 		//Create Arrays
-		Double[] priceArray = {}; 
+		double [] itemArray = fillArray();
 		
 		System.out.println("Hi! Welcome to Maggie's! \nWhat's your name?");
 		custname = input.next();
@@ -36,4 +36,27 @@ public class PointOfSale
 
 		
     }
+	public static double [] fillArray() 
+    {
+    double [] array = new double[10];
+
+    
+    Scanner input = new Scanner(System.in);
+
+    //get user input
+    System.out.print("Please enter your item price:  ");
+    for(int x = 0; x<itemArray.length; x++)
+    {
+        System.out.print("item " + (x + 1) + ": $  ");
+        itemArray[x] = input.nextInt();
+
+        //validate input
+        while(itemArray[x] < 0 || itemArray[x] > 99.99)
+            {
+                System.out.print("Out of range, please enter a valid price.");
+                itemArray[x] = input.nextInt();
+            }
+    }
+    return array;
+}//end of user input
 }
