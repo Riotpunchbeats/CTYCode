@@ -45,7 +45,7 @@ public class PointOfSale
 
     //get user input
     System.out.print("Please enter your item price:  ");
-    for(int x = 0; x<array.length; x++)
+    for(double x = 0; x<array.length; x++)
     {
         System.out.print("item " + (x + 1) + ": $  ");
         array[x] = input.nextInt();
