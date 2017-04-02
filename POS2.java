@@ -22,9 +22,14 @@ public class PointOfSale
 		final double MAX_PURCHASE = 99.99;
 		final int SENTINEL = -1;
 		
-		//Print a title and instructions
+		//Print a title and instructions/ get users name
+		System.out.println("Hi! Welcome to Maggie's! \nWhat's your name?");
+		custname = input.next();
+		System.out.println("Ok, " + custname + ", enter the price of each of your purchases in dollars and cents and then hit the ENTER key. \nFor example, if your item cost $5.99, then you would enter 5.99.");
+		System.out.println("\nIf you make a mistake while entering a price, just enter a zero for the next entry. The last entry will then be subtracted from your total.");
+
+		System.out.println("enter");
 		
-		//Get user's name
 		
 		//Main outer loop		
 		do
