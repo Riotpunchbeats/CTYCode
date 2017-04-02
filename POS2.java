@@ -17,7 +17,7 @@
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class PointOfSale
+public class POS2
 {
 	public static void main(String[] args)
 	{
@@ -30,7 +30,7 @@ public class PointOfSale
 		double price = 0.0;							//stores user-entered prices
 		int index = 0;									//counts loop iterations, used to control array length of 10
 		int arrayCount = 0;							//counts valid prices assigned to array elements, used to control a zero entry
-		
+		String custname = "";
 		//Declare a constant		
 		final double MAX_PURCHASE = 99.99;
 		final int SENTINEL = -1;
@@ -86,4 +86,5 @@ public class PointOfSale
 		//**Determine the denominations**	
 		
 
-	}//End of main method
+}
+} //End of main method
