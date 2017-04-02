@@ -12,99 +12,92 @@
  * 6. Create loop
  */
 
-
-
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class POS2
-{
-	public static void main(String[] args)
-	{
+public class POS2 {
+	public static void main(String[] args) {
 		//Create Scanner object
 		Scanner input = new Scanner(System.in);
 		//Create a DecimalFormat object
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
 		//Declare variables
-		double [] purchases = new double[10];	//stores valid purchases
-		double price = 0.0;							//stores user-entered prices
-		int index = 0;									//counts loop iterations, used to control array length of 10
-		int arrayCount = 0;							//counts valid prices assigned to array elements, used to control a zero entry
+		double[] purchases = new double[10]; //stores valid purchases
+		double price = 0.0; //stores user-entered prices
+		int index = 0; //counts loop iterations, used to control array length of 10
+		int arrayCount = 0; //counts valid prices assigned to array elements, used to control a zero entry
 		String custname = "";
 		//Declare a constant		
 		final double MAX_PURCHASE = 99.99;
 		final int SENTINEL = -1;
-		
+
 		//Print a title and instructions/ get users name
 		System.out.println("Hi! Welcome to Maggie's! \nWhat's your name?");
 		custname = input.next();
-		System.out.println("Ok, " + custname + ", enter the price of each of your purchases in dollars and cents and then hit the ENTER key. \nFor example, if your item cost $5.99, then you would enter 5.99.");
-		System.out.println("\nIf you make a mistake while entering a price, just enter a zero for the next entry. The last entry will then be subtracted from your total.");
+		System.out.println("Ok, " + custname
+				+ ", enter the price of each of your purchases in dollars and cents and then hit the ENTER key. \nFor example, if your item cost $5.99, then you would enter 5.99.");
+		System.out.println(
+				"\nIf you make a mistake while entering a price, just enter a zero for the next entry. The last entry will then be subtracted from your total.");
 
 		System.out.println("enter");
-		
-		
+
 		//Main outer loop		
-		do
-		{			
+		do {
 			//Get a purchase price (using price variable)
-			for(int x = 0; x < purchases.length; x++)
-            {
-                System.out.println("Item " + (x+1) + ": ");
-                purchases[x] = input.nextDouble();
-            
-			//Validate that price is not beyond the max purchase or < -1
-			while(purchases[x] <0 || purchases[x] > 99.99)
-				{
-					System.out.println("Price out of range. Please check the price and re-enter");
-					purchases[x] = input.nextDouble();
-				}
-			arrayCount++;
-				if(price == 0.0 && arrayCount > 0)
-				{
+			for (int x = 0; x < purchases.length; x++) {
+				System.out.println("Item " + (x + 1) + ": ");
+				purchases[x] = input.nextDouble();
+
+				if (price == 0.0 && arrayCount > 0) {
 					System.out.println("ZERO");
 					purchases[x] = 0.0;
 					purchases = input.nextDouble();
 				}
+
+				//Validate that price is not beyond the max purchase or < -1
+				while (purchases[x] < 0 || purchases[x] > 99.99) {
+					System.out.println("Price out of range. Please check the price and re-enter");
+					purchases[x] = input.nextDouble();
+				}
+				arrayCount++;
+
 			}
-			
-			
+
 			//Check if the user has signaled that he made a mistake and remove previous purchase
 			//if(price == 0.0 && arrayCount > 0)
 			//{
-				//System.out.println("You have entered 0. Your previous entry has been deleted. Please re-enter the price");
-				//purchases[arrayCount] = 0.0;
-				//purchases[arrayCount] = input.nextDouble();
-				
+			//System.out.println("You have entered 0. Your previous entry has been deleted. Please re-enter the price");
+			//purchases[arrayCount] = 0.0;
+			//purchases[arrayCount] = input.nextDouble();
+
 			//}
 			//Check if price is zero and arrayCount is zero, there are no items to remove 
 			//else if(price == 0.0 && arrayCount == 0)
 			{
-				
+
 			}
 			//Check if price is greater than 0.0, process the purchase
 			//else if(price > 0.0)
 			{
 				//Store the purchase in the purchase array
-				
+
 				//Update the subtotal
-				
+
 				//Print the subtotal
-				
+
 				//Increment the counters
 			}
-		}while(price != SENTINEL && index < 10);		//User is done shopping
-		
+		} while (price != SENTINEL && index < 10); //User is done shopping
+
 		//Display the purchases (only the elements with data) and subtotal
-	
+
 		//Calculate the hst and print the result
 		//Calculate the grand total and print the result
 		//Get the tender amount
 		//Validate the tender amount
 		//Calculate the change
-		
-		//**Determine the denominations**	
-		
 
-}
+		//**Determine the denominations**	
+
+	}
 } //End of main method
