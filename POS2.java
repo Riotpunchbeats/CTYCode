@@ -59,22 +59,31 @@ public class POS2
 					System.out.println("Price out of range. Please check the price and re-enter");
 					purchases[x] = input.nextDouble();
 				}
+			arrayCount++;
+				if(price == 0.0 && arrayCount > 0)
+				{
+					System.out.println("ZERO");
+					purchases[x] = 0.0;
+					purchases = input.nextDouble();
+				}
 			}
 			
 			
 			//Check if the user has signaled that he made a mistake and remove previous purchase
-			if(price == 0.0 && arrayCount > 0)
-			{
+			//if(price == 0.0 && arrayCount > 0)
+			//{
+				//System.out.println("You have entered 0. Your previous entry has been deleted. Please re-enter the price");
+				//purchases[arrayCount] = 0.0;
+				//purchases[arrayCount] = input.nextDouble();
 				
-				
-			}
+			//}
 			//Check if price is zero and arrayCount is zero, there are no items to remove 
-			else if(price == 0.0 && arrayCount == 0)
+			//else if(price == 0.0 && arrayCount == 0)
 			{
 				
 			}
 			//Check if price is greater than 0.0, process the purchase
-			else if(price > 0.0)
+			//else if(price > 0.0)
 			{
 				//Store the purchase in the purchase array
 				
