@@ -48,7 +48,11 @@ public class POS2
 		do
 		{			
 			//Get a purchase price (using price variable)
-			
+			for(double x = 0; x < purchases.length; x++)
+            {
+                System.out.println("Item " + (x+1) + ": ");
+                purchases[x] = input.nextDouble();
+            }
 			//Validate that price is not beyond the max purchase or < -1
 			
 			//Check if the user has signaled that he made a mistake and remove previous purchase
