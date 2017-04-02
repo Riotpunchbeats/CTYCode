@@ -1,3 +1,16 @@
+/**
+ * Program Name:	PointOfSale
+ * Purpose:			To Create a simple Point of sale system with user input
+ * Coder:			Ayden Green 0818753
+ * Date:		    
+ * Algorythm:
+ * 1. Declare variables
+ * 2. Declare constants
+ * 3. Create Arrays 
+ * 4. Print Preamble
+ * 5. Get user input
+ * 6. Create loop
+ */
 
 
 
