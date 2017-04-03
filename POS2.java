@@ -51,15 +51,16 @@ public class POS2 {
 				if (price == 0.0 && arrayCount > 0) {
 					System.out.println("ZERO");
 					purchases[x] = 0.0;
-					purchases = input.nextDouble();
+					purchases[x] = input.nextDouble();
 				}
 
 				//Validate that price is not beyond the max purchase or < -1
-				while (purchases[x] < 0 || purchases[x] > 99.99) {
-					System.out.println("Price out of range. Please check the price and re-enter");
-					purchases[x] = input.nextDouble();
-				}
-				arrayCount++;
+				if (purchases[x] < 0 || purchases[x] > 99.99) 
+					{
+						System.out.println("Price out of range. Please check the price and re-enter");
+						purchases[x] = input.nextDouble();
+					}
+				
 
 			}
 
